@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "82c505a6-9935-42ce-901a-47c8a6ad8c42",
+		"name": "MLAcademy",
+		"description": "Peticiones REST de la Academia de Machine Learning Intersystems IRIS, Iberia Summit 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PMML Por Defecto con fila de Datos ya en BBDD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"operationName\":\"Model Executor\",\n  \"sourceID\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:52773/csp/mlacademy/rest/predict/calculateprediction",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "52773",
+					"path": [
+						"csp",
+						"mlacademy",
+						"rest",
+						"predict",
+						"calculateprediction"
+					]
+				},
+				"description": "Prediccion con Algoritmo por defecto: PMML De Regresion Logistica importado: SimpleLR"
+			},
+			"response": []
+		},
+		{
+			"name": "PMML por defecto con Valores de caracteristicas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operationName\":\"Model Executor\",\r\n  \"dataMap\": {\r\n    \"Age\":\"50\",\r\n    \"Alcoholism\":0,\r\n    \"Delay\":35,\r\n    \"Diabetes\":0,\r\n    \"Gender_F\":1,\r\n    \"Gender_M\":0,\r\n    \"Handicap\":0,\r\n    \"Hypertension\":1,\r\n    \"Scholarship\":1,\r\n    \"smsReceived\":1\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:52773/csp/mlacademy/rest/predict/calculateprediction",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "52773",
+					"path": [
+						"csp",
+						"mlacademy",
+						"rest",
+						"predict",
+						"calculateprediction"
+					]
+				},
+				"description": "Se llama al Algorithmo por defecto con loas valores de campo especificados"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

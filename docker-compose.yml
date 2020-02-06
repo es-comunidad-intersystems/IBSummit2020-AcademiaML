@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  iris4ml:
+    build:
+      context: ./iris4ml/
+    init: true
+    image: pyduquesnoy/mlacademy:iris4ml-version-0.1
+    container_name: iris4ml
+    hostname: iris4ml
+    restart: on-failure
+    ports:
+    # 51773 is the superserver default port (host:container)
+    - "51773:51773"
+    # 52773 is the webserver(management portal port
+    - "52773:52773"
+    volumes:
+    # Prod may look here for new PMML files
+      - type: bind
+        source: ./shared
+        target: /shared
+
+  jupyter4iris:
+    build:
+      context: ./jupyter4iris
+    init: true
+    image: pyduquesnoy/mlacademy:jupyter4iris-version-0.1
+    container_name: jupyter4iris
+    hostname: jupyter4iris
+    ports:
+    # 8888 is the jupyter server port
+    - "8888:8888"
+    volumes:
+      - type: bind
+        source: ./shared
+        target: /root/mlacademy
+     
