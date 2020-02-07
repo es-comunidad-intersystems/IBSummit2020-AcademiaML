@@ -87,5 +87,12 @@ Desde un Browser, verifica que se puede acceder a ambos contenedores, la platafo
 | iris4ml          | http://localhost:52773/csp/sys/UtilHome.csp | SuperUser | sys      |
 | jupyter notebook | http://locahost.8888                        | -         | IRIS     |
 
-​	
-​	
+
+
+## Dudas de instalación	
+
+​	Para dudas o problemas en la instalación puedes contactar:
+
+Ricardo.paiva@intersystems.com
+
+Pierre-Yves.Duquesnoy@intersystems.com
