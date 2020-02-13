@@ -31,7 +31,7 @@ Esta academia muestra como:
 ### Descargar código
 
 ```console
-$git clone https://github.com/PYDuquesnoy/irismlacademy
+$git clone https://github.com/es-comunidad-intersystems/IBSummit2020-AcademiaML.git
 ```
 
 
