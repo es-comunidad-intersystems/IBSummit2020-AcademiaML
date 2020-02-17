@@ -53,7 +53,7 @@ En DBeaver,  definir el driver JDBC de Intersystems IRIS en el Menu "Database" /
 | Driver name  | IRIS                                            |
 | Driver Type  | Generic                                         |
 | ClassName    | com.intersystems.jdbc.IRISDriver                |
-| URL Template | jdbc://IRIS://{host}:{port}/{database}          |
+| URL Template | jdbc:IRIS://{host}:{port}/{database}            |
 | Default Port | 51773                                           |
 | Description  | InterSystems IRIS JDBC Driver                   |
 | Libraries    | irismlacademy/shared/intersytems-jdbc-3.1.0.jar |
