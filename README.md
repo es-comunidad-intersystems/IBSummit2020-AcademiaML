@@ -59,7 +59,7 @@ En DBeaver,  definir el driver JDBC de Intersystems IRIS en el Menu "Database" /
 | Libraries    | irismlacademy/shared/intersytems-jdbc-3.1.0.jar |
 | Driver Class | com.intersystems.jdbc.IRISDriver                |
 
-
+Nota: Se ha corregido la URL 2020-02-17, sobraban "//" delante de IRIS.
 
 Definir la conexión JDBC al contenedor iris4ml:
 
