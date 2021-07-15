@@ -4,7 +4,7 @@ services:
     build:
       context: ./iris4ml/
     init: true
-    image: pyduquesnoy/mlacademy:iris4ml-version-0.1
+    image: pyduquesnoy/mlacademy:iris4ml-version-0.2
     container_name: iris4ml
     hostname: iris4ml
     restart: on-failure
@@ -23,7 +23,7 @@ services:
     build:
       context: ./jupyter4iris
     init: true
-    image: pyduquesnoy/mlacademy:jupyter4iris-version-0.1
+    image: pyduquesnoy/mlacademy:jupyter4iris-version-0.2
     container_name: jupyter4iris
     hostname: jupyter4iris
     ports:
